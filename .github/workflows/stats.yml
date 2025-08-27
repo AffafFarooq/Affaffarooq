@@ -1,8 +1,9 @@
 name: Update GitHub Stats
 
 on:
-  schedule:
-    - cron: "0 */12 * * *" # har 12 ghante
+  push:            # jaise hi commit push hoga, workflow chalega
+    branches:
+      - main       # sirf main branch pe chale, chahe private ya public repo
   workflow_dispatch:
 
 jobs:
@@ -14,7 +15,7 @@ jobs:
 
       - name: Update README
         run: |
-          echo "![Affaf's GitHub stats](https://github-readme-stats.vercel.app/api?username=AffafFarooq&show_icons=true&theme=radical)" > README.md
+          echo "![Affaf's GitHub stats](https://github-readme-stats.vercel.app/api?username=AffafFarooq&show_icons=true&theme=radical&count_private=true)" > README.md
 
       - name: Commit changes
         env:
