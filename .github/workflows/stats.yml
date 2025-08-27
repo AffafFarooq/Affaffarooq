@@ -2,15 +2,26 @@ name: Update GitHub Stats
 
 on:
   schedule:
-    - cron: '0 * * * *'   # har ghante me update karega
+    - cron: "0 */12 * * *" # har 12 ghante
   workflow_dispatch:
 
 jobs:
-  build:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Update Readme with GitHub Stats
-        uses: anuraghazra/github-readme-stats@master
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Update README
+        run: |
+          echo "![Affaf's GitHub stats](https://github-readme-stats.vercel.app/api?username=AffafFarooq&show_icons=true&theme=radical)" > README.md
+
+      - name: Commit changes
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config --global user.name "AffafFarooq"
+          git config --global user.email "tumhara-email@example.com"
+          git add README.md
+          git commit -m "update stats" || echo "no changes"
+          git push
