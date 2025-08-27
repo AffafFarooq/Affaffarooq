@@ -1,0 +1,18 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # Roz raat 12 baje (UTC) ye chalega, tum is time ko change bhi kar sakte ho
+  workflow_dispatch:       # Manual run button bhi aa jayega
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Generate Stats
+        uses: anuraghazra/github-readme-stats@master
+        env:
+          PAT_1: ${{ secrets.PAT_1 }}
