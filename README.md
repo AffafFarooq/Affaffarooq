@@ -20,3 +20,6 @@
 
 ### 📈 Most Used Languages:
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=affaffarooq&layout=compact&theme=radical)
+
+
+![Affaf's GitHub stats](https://github-readme-stats.vercel.app/api?username=AffafFarooq&count_private=true&show_icons=true&theme=radical)
