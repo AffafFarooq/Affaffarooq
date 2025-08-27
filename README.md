@@ -14,11 +14,10 @@
 ---
 
 ### 📊 GitHub Stats:
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=affaffarooq&show_icons=true&theme=radical&count_private=true)
+![Affaf's GitHub stats](https://github-readme-stats.vercel.app/api?username=AffafFarooq&show_icons=true&theme=radical&count_private=true)
 
 ---
 
 ### 📈 Most Used Languages:
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=affaffarooq&layout=compact&theme=radical)
 
-![Affaf's GitHub stats](https://github-readme-stats.vercel.app/api?username=AffafFarooq&show_icons=true&theme=radical&count_private=true)
