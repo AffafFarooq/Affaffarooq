@@ -1,10 +1,10 @@
 name: Update GitHub Stats
 
 on:
-  push:            # jaise hi commit push hoga, workflow chalega
+  push:                # jab bhi commit push hoga
     branches:
-      - main       # sirf main branch pe chale, chahe private ya public repo
-  workflow_dispatch:
+      - main           # agar tumhari branch master hai to 'master' likho
+  workflow_dispatch:   # manually bhi run kar sakte ho
 
 jobs:
   update-readme:
@@ -18,11 +18,11 @@ jobs:
           echo "![Affaf's GitHub stats](https://github-readme-stats.vercel.app/api?username=AffafFarooq&show_icons=true&theme=radical&count_private=true)" > README.md
 
       - name: Commit changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --global user.name "AffafFarooq"
           git config --global user.email "tumhara-email@example.com"
           git add README.md
           git commit -m "update stats" || echo "no changes"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
