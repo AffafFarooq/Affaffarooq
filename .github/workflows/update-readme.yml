@@ -19,7 +19,7 @@ jobs:
       - name: Commit changes
         run: |
           git config --global user.name "AffafFarooq"
-          git config --global user.email "youremail@example.com"
+          git config --global user.email "faffaf470@gmail.com"
           git add README.md
           git commit -m "Update GitHub stats" || echo "No changes to commit"
           git push
